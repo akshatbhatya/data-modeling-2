@@ -1,0 +1,16 @@
+{
+  "name": "data-modeling-2",
+  "version": "1.0.0",
+  "description": "data modeling of e commerce and hospital",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akshat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mongoose": "^8.2.3"
+  }
+}
