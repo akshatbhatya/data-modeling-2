@@ -7,9 +7,9 @@ const categorySchema=new mongoose.Schema({
     },
     createdBy:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:user,
-
-    }
+        ref:"user",
+    },
+    
 },{timestamps:true});
 
 export const category=mongoose.model("category",categorySchema);
