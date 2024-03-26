@@ -15,6 +15,7 @@ const userSchema=new moongoose.Schema({
         type:String,
         required:[true,"email is required"],
         lowercase:true,
+        unique:true,
     },
     dob:{
         type:String,
