@@ -1,4 +1,17 @@
 import mongoose from "mongoose";
+
+const workingHours=new mongoose.Schema({
+    nameOfHospital:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"hospital"
+    },
+    workingTime:{
+        type:Number,
+        required:true
+
+    }
+    
+},{timestamps:true})
 const doctorSchema=new mongoose.Schema({
     doctorName:{
         type:String,
@@ -30,8 +43,11 @@ const doctorSchema=new mongoose.Schema({
     speciality:{
         type:String,
         required:true
-    }
-
+    },
+    workingTime:[
+        {workingHours}
+    ]
+    
 },{timestamps:true})
 
 export const doctor=mongoose.model("doctor",doctorSchema)
