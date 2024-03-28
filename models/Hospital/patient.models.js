@@ -21,13 +21,18 @@ const patentSchema=new mongoose.Schema({
         default:"regular checkup",
         required:true
     },
-    previousAddmittedHospital:{
-        type:String,
+    hospitLAddmittedIN:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"hospital"
+    },
+    age:{
+        type:Number,
         required:true
     },
-    dob:{
+    bloodGroup:{
         type:String,
-        required:true
+        enum:["+a","-a","+b","+ab","-ab","+o","-o"]
+
     },
     gender:{
         type:String,
